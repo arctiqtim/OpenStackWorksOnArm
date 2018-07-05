@@ -37,13 +37,13 @@ done
 
 # assign this subnet to the provider bridge
 PROVIDER_CIDR_MSV="$(echo $PROVIDER_CIDR | cut -d/ -f1 | cut -d. -f1-3)"
-#echo $PROVIDER_CIDR_MSV
+echo $PROVIDER_CIDR_MSV
 PROVIDER_CIDR_LSV="$(echo $PROVIDER_CIDR | cut -d/ -f1 | cut -d. -f4)"
-#echo $PROVIDER_CIDR_LSV
+echo $PROVIDER_CIDR_LSV
 PROVIDER_CIDR_LSV=$(( $PROVIDER_CIDR_LSV + 1 ))
-#echo $PROVIDER_CIDR_LSV
+echo $PROVIDER_CIDR_LSV
 PROVIDER_CIDR_SIZE="$(echo $PROVIDER_CIDR | cut -d/ -f2)"
-#echo $PROVIDER_CIDR_SIZE
+echo $PROVIDER_CIDR_SIZE
 
 PROVIDER_IP=${PROVIDER_CIDR_MSV}.${PROVIDER_CIDR_LSV}/${PROVIDER_CIDR_SIZE}
 PROVIDER_BRIDGE=`brctl show | grep bond0 | cut -f1`

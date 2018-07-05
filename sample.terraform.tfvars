@@ -4,9 +4,9 @@
 
 #packet_facility = "ewr1"
 
-packet_controller_type = baremetal_0
+packet_controller_type = baremetal_2
  
-packet_dashboard_type = baremetal_0
+packet_dashboard_type = baremetal_1
 
 packet_compute-x86_type = baremetal_2
 openstack_compute-x86_count = 1
